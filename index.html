@@ -1,0 +1,2006 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeshan Rai</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+
+        .hamburger {
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            cursor: pointer;
+            z-index: 100;
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 20px;
+        }
+
+        .hamburger div {
+            background-color: #f0e8e8;
+            height: 4px;
+            width: 100%;
+            border-radius: 2px;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            width: 250px;
+            height: 100%;
+            background-color: #1a1a1a;
+            color: white;
+            overflow: hidden;
+            transition: left 0.3s ease;
+            z-index: 99;
+            padding: 20px 0;
+          
+        }
+
+        .sidebar.open {
+            left: 0;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar ul li {
+            padding: 15px 20px;
+            border-bottom: 1px solid #444;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: white;
+            display: block;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .sidebar {
+                left: 0;
+                width: 250px;
+                position: relative;
+                height: auto;
+                background-color: #1a1a1a;
+                color: black;
+                padding: 0;
+                transition: none;
+            }
+            .close-btn {
+            /* position: none;
+            top: none;
+            right: none;
+            cursor: none;
+            background: none;
+            border: none;
+            color:none;
+            font-size: none; */
+            display: none;
+        }
+
+            .sidebar ul li {
+                border-bottom: none;
+                padding: 5px 10px;
+            }
+
+            .sidebar ul li a {
+                color: rgb(246, 246, 246);
+            }
+/* General Sidebar Styling */
+.nav-links {
+      list-style: none;
+      width: 100%;
+    }
+
+    .nav-links li {
+      margin: 10px 0;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      display: block;
+      width: 100%;
+      text-align: center;
+      border-radius: 5px;
+    }
+
+.nav-links .nav-item {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  transition: color 0.3s;
+}
+
+.nav-links .nav-item span {
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+  position: relative;
+}
+
+/* Animation for each letter */
+.nav-links .nav-item:hover span {
+  animation: bounce 0.4s ease-in-out forwards;
+}
+
+.nav-links .nav-item:hover span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.nav-links .nav-item:hover span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.nav-links .nav-item:hover span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.nav-links .nav-item:hover span:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.nav-links .nav-item:hover span:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+/* Keyframe for letter bounce and neon glow */
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+    color: white;
+  }
+  30% {
+    transform: translateY(-10px);
+    color: #21e6c1; /* Neon color */
+    text-shadow: 0 0 10px #21e6c1, 0 0 20px #21e6c1, 0 0 30px #21e6c1;
+  }
+  100% {
+    transform: translateY(0);
+    color: #21e6c1;
+  }
+}
+
+h2{
+  color: #e6e6fa;
+}
+p{
+  color: #e6e6fa;
+}
+
+
+        }
+        .profile {
+  text-align: center;
+  margin-bottom: 30px;
+  animation: profileZoomRotate 2s ease-in-out;
+}
+
+
+
+/* Profile Image Styling */
+.profile-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 3px solid white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  animation: glowEffect 2s ease-in-out infinite alternate;
+  margin-top:10px;
+}
+/* General Sidebar Styling */
+
+
+.nav-links .nav-item {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  transition: color 0.3s;
+}
+
+.nav-links .nav-item span {
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+  position: relative;
+}
+
+/* Animation for each letter */
+.nav-links .nav-item:hover span {
+  animation: bounce 0.4s ease-in-out forwards;
+}
+
+.nav-links .nav-item:hover span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.nav-links .nav-item:hover span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.nav-links .nav-item:hover span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.nav-links .nav-item:hover span:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.nav-links .nav-item:hover span:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+/* Keyframe for letter bounce and neon glow */
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+    color: white;
+  }
+  30% {
+    transform: translateY(-10px);
+    color: #21e6c1; /* Neon color */
+    text-shadow: 0 0 10px #21e6c1, 0 0 20px #21e6c1, 0 0 30px #21e6c1;
+  }
+  100% {
+    transform: translateY(0);
+    color: #21e6c1;
+  }
+}
+main{
+  margin: 0px;
+}
+
+   /* Profile Section Animation */
+   .profile {
+  text-align: center;
+  margin-bottom: 30px;
+  animation: profileZoomRotate 2s ease-in-out;
+}
+
+
+
+/* Profile Image Styling */
+.profile-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 3px solid white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  animation: glowEffect 2s ease-in-out infinite alternate;
+}
+
+/* Glowing effect for profile image */
+@keyframes glowEffect {
+  0% {
+    box-shadow: 0 0 10px rgba(237, 226, 232, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(255, 105, 180, 1);
+  }
+}
+
+
+    </style>
+</head>
+<body>
+
+<div class="hamburger" id="hamburger">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+
+<div class="sidebar" id="sidebar">
+    <button class="close-btn" id="closeBtn">&times;</button>
+    <div class="profile">
+      <img src="image/background.JPG" alt="Profile Picture" class="profile-img">
+      <h2 class="name_h2">Jeshan Rai</h2>
+      <p>Front-End Developer</p>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home" class="nav-item">Home</a></li>
+      <li><a href="#about" class="nav-item">About</a></li>
+      <li><a href="#skills" class="nav-item">Skills</a></li>
+      <li><a href="#Projects" class="nav-item">Projects</a></li>
+      <li><a href="#Education" class="nav-item">Education</a></li>
+      <li><a href="#Contact" class="nav-item">Contact</a></li>
+    </ul>  
+</div>
+
+     
+
+</aside>
+<main>
+  <section id="home">
+    <style>
+        .home-container {
+          display: flex;
+          /* justify-content: space-between; */
+          align-items: center;
+          width: 100%;
+          max-width: 1400px;
+          margin: 0px;
+          height: 100vh;
+          
+          
+        }
+    
+        .text-content {
+          max-width: 50%;
+        }
+    
+        .hello_h2,
+        .text-content h3 {
+          margin-bottom: 10px;
+          color: whitesmoke;
+        }
+    
+        .text-content h2 {
+          font-size: 24px;
+          color: whitesmoke;
+        }
+    
+    
+        .text-content h3 {
+          font-size: 28px;
+          color: whitesmoke;
+        }
+    
+        .text-content .highlight {
+          color: #00d9a5;
+        }
+    
+        .text-content p {
+          margin: 20px 0;
+          font-size: 16px;
+          line-height: 1.6;
+          color: whitesmoke;
+        }
+
+.social-image1{
+width: 75%;
+height: auto;
+border-radius: 2px;
+}
+.icon{
+background-color:blanchedalmond;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+width: 50px;
+height: 50px;
+border: 4px solid #0ef;
+border-radius: 50%;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+margin-right: 8px;
+margin-bottom: 10px;
+}
+.icon:hover{
+transform: scale(1.2);
+box-shadow: 0 0 20px rgba(14, 239, 239, 0.7);
+}
+@media (max-width: 768px) {
+.social-icons {
+  gap: 10px;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+.social-image {
+  width: 60%;
+}
+}
+
+    /* Base Styles */
+.avatar  {
+padding: 5px;
+width: 65%;
+max-width: 600px;
+background-color: #fff;
+position: relative;
+border: 10px solid #00d9a5;
+border-radius: 25px;
+overflow: hidden;
+box-shadow: 0 0px 25px rgba(234, 231, 231, 0.5);
+transition: transform 0.3s, box-shadow 0.5s;
+margin-right: 90px;
+display: flex;
+}
+
+.avatar img {
+width: 100%;
+display: block;
+border-radius: 20px;
+}
+
+.avatar:hover {
+transform: scale(1.1);
+box-shadow: 0 0px 35px rgba(250, 249, 249, 0.8);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+.avatar {
+  width: 70%;
+  margin-right: 50px;
+}
+  .home-container{
+    flex-direction: column;
+  }
+
+}
+
+@media (max-width: 768px) {
+.avatar {
+  width: 80%;
+  margin-right: 20px;
+ 
+}
+.home-container{
+    flex-direction: column;
+    margin: 0px;
+}
+.text-content{
+    font-size: 2rem;
+    margin-right:170px;
+    margin-top: 0px;
+
+}
+.avatar{
+    
+    margin-left:0px;
+}
+.download-btn{
+    margin-bottom: 15px;
+}
+.typing-effect{
+    font-size: 5rem;
+}
+.h3_p{
+    font-size: 3rem;
+}
+.word{
+    font-size: 2rem;
+    flex-direction: column;
+}
+
+}
+
+@media (max-width: 480px) {
+.avatar {
+  width: 90%;
+  margin-right: 0;
+  border: 5px solid #00d9a5;
+  border-radius: 15px;
+ 
+}
+
+.avatar img {
+  border-radius: 10px;
+}
+.text-content{
+    margin-top: 140px;
+}
+.word{
+    font-size: 20px;
+}
+}
+
+         /* Infinite Typing Effect for h2 */
+         .typing-effect {
+          font-size: 3rem;
+          font-family: 'Courier New', Courier, monospace;
+          white-space: nowrap;
+          overflow: hidden;
+          border-right: 3px solid white;
+          width: 0;
+          animation: typing 5s steps(30, end) infinite, blink 0.7s step-end infinite alternate;
+          z-index: 3;
+        }
+    
+        @keyframes typing {
+          0% {
+            width: 0;
+          }
+          50% { 
+            width: 20ch; /* Adjust width to fit your text */
+          }
+          100% {
+            width: 0; /* Reset for infinite effect */
+          }
+        }
+    
+  .word {
+    font-weight: bold;
+    position: relative;
+    display: flex;
+    opacity: 1;
+    transition: opacity 1s ease-in-out, color 1s ease-in-out;
+    color: #97c1a1; /* Blue text color */
+    text-shadow: 0 0 10px #4e9bff, 0 0 20px #4e9bff, 0 0 30px #4e9bff, 0 0 40px #4e9bff;
+    margin-bottom: 15px;
+  }
+  
+  /* Neon blue glow for "Developer" */
+  .word.developer,.word.coder {
+    color: #4e9bff; /* Blue text color */
+    text-shadow: 0 0 10px #4e9bff, 0 0 20px #4e9bff, 0 0 30px #4e9bff, 0 0 40px #4e9bff;
+  }
+
+
+  .word.fade-out {
+    opacity: 0;
+  }
+
+  .word.fade-in {
+    opacity: 1;
+  }
+  
+  .h3_p{
+   
+    font-size: 3.5rem;
+    white-space: nowrap;
+    width: 500px;
+
+  }
+  .word{
+    font-size: 3rem;
+  }
+  .download-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+      background-color: #1abc9c;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .download-btn:hover {
+      background-color: #16a085;
+    }
+
+    /* Icon styling */
+    .download-btn img {
+      margin-right: 8px; /* Space between image and text */
+      width: 20px; /* Adjust icon size */
+      height: 20px;
+    }
+
+      
+    
+      </style>
+      
+      <div class="home-container">
+        <div class="text-content">
+          <h2 style="font-size: 45px;" clsss="hello_h2">Hello,</h2>
+          <h2 class="typing-effect" style="font-size: 2rem;">It's Me, Jeshan Rai.</h2>
+          <h3 class="h3_p">And I'm a Front-End <span class="word" id="role" style="font-size: 35px;"> Developer.</span></h3>
+          
+          <div class="social-icons">
+            <a href="https://www.facebook.com/raichoro.ma" target="_blank" class="icon"><img src="image/facebook.png" alt="Facebook" class="social-image1"></a>
+            <a href="https://www.instagram.com/jeshan_rai/" target="_blank" class="icon"><img src="image/instagram.png" alt="Instagram" class="social-image1"></a>
+            <a href="https://www.linkedin.com/in/jeshan-rai-45092b340/" target="_blank" class="icon"><img src="image/linkden.png" alt="LinkedIn" class="social-image1"></a>
+            <a href="https://github.com/jeshanrai" target="_blank" class="icon"><img src="image/github.png" alt="GitHub" class="social-image1"></a>
+            <a href="mailto:jeshanrai96@gmail.com" target="_blank" class="icon"><img src="image/gmail.png" alt="Gmail" class="social-image1"></a>
+          </div>
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Download Button</title>
+            <style>
+              /* Button styling */
+              .download-btn {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                padding: 10px 20px;
+                font-size: 16px;
+                font-weight: bold;
+                color: white;
+                background-color: #1abc9c;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                text-decoration: none;
+                transition: background-color 0.3s ease;
+                transition: 0.3 ease-in;
+              }
+          
+              .download-btn:hover {
+                background-color: #16a085;
+                transform: scale(1.07);
+                transition: transform 0.3s ease, box-shadow 0.7s ease;
+                
+              }
+          
+              /* Icon styling */
+              .download-btn img {
+                margin-right: 8px; /* Space between image and text */
+                width: 20px; /* Adjust icon size */
+                height: 20px;
+              }
+            </style>
+          </head>
+          <body>
+          
+            <!-- Download Button -->
+            <a href="resume.pdf" class="download-btn" download="C:\Users\Dell\Desktop\userportfolio\resume.pdf" target="_blank">
+              <img src="image/download.png" alt="Download Icon">
+              Download CV
+            </a>
+          
+          </body>
+          </html>
+           
+         
+          <!-- <button class="download-btn"><image src="image/download.png" class="download">Download CV</button> -->
+        </div>
+        <div class="avatar">
+            <img src="image/homeprofile.jpg" alt="Avatar">
+        </div>
+      </div>
+      <script>
+        document.querySelector('.download-btn').addEventListener('click', function() {
+  alert('Your CV is downloading!');
+});
+        const roleElement = document.getElementById('role');
+        const words = ['Developer.', 'Coder.'];
+        let currentWordIndex = 0;
+    
+        function changeWord() {
+          // Apply fade-out class to start disappearing effect
+          roleElement.classList.add('fade-out');
+          roleElement.classList.remove('developer', 'coder.'); // Remove both glow classes
+    
+          setTimeout(() => {
+            currentWordIndex = (currentWordIndex + 1) % words.length;
+            roleElement.textContent = words[currentWordIndex];
+    
+            // Apply the appropriate glow class for the new word
+            if (words[currentWordIndex] === 'Developer') {
+              roleElement.classList.add('developer.');
+            } else {
+              roleElement.classList.add('coder.');
+            }
+            
+            // After changing the word, apply fade-in class for smooth transition
+            roleElement.classList.remove('fade-out');
+            roleElement.classList.add('fade-in');
+    
+            // After the fade-in animation, remove the 'fade-in' class to reset
+            setTimeout(() => {
+              roleElement.classList.remove('fade-in');
+            }, 1000); // Matches the duration of the fade-in effect
+          }, 1000); // Wait for the fade-out (1 second)
+        }
+    
+        // Change word every 2 seconds
+        setInterval(changeWord, 2000);
+      </script>
+  </section>
+  <section id="about">
+    <style>
+      @keyframes slideFromLeft {
+          from {
+              transform: translateX(-100px);
+              opacity: 0;
+          }
+          to {
+              transform: translateX(0);
+              opacity: 1;
+          }
+      }
+
+      @keyframes slideFromRight {
+          from {
+              transform: translateX(100px);
+              opacity: 0;
+          }
+          to {
+              transform: translateX(0);
+              opacity: 1;
+          }
+      }
+
+      @keyframes fadeIn {
+          from {
+              opacity: 0;
+          }
+          to {
+              opacity: 1;
+          }
+      }
+
+      @keyframes slideFromBottom {
+          from {
+              transform: translateY(100px);
+              opacity: 0;
+          }
+          to {
+              transform: translateY(0);
+              opacity: 1;
+          }
+      }
+
+      body {
+          font-family: 'Poppins', sans-serif;
+          margin-left: 0;
+          padding: 0;
+          color: #fff;
+          overflow-x: hidden;
+      }
+
+      h1 {
+          text-align: center;
+          font-size: 2.5em;
+          margin: 20px 0;
+          color: #fff;
+          text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
+      }
+
+      #about {
+          padding: 40px;
+      }
+
+      .about-section {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          overflow: hidden;
+          /* margin-right: 290px; */
+      }
+
+      .about-title {
+          font-size: 3rem;
+          margin-bottom: 30px;
+          opacity: 0;
+          animation: slideFromTop 2s ease-in-out forwards;
+      }
+
+      .about-content1 {
+          max-width: 800px;
+          line-height: 1.8;
+          font-size: 1.2rem;
+          margin-bottom: 10px;
+          opacity: 0;
+          color: rgb(252, 251, 251);
+          animation: slideFromRight 1s ease-in-out 0.5s forwards;
+      }
+
+      .about-content {
+        color: rgb(251, 245, 245);
+          max-width: 800px;
+          line-height: 1.8;
+          font-size: 1.2rem;
+          margin-bottom: 10px;
+          opacity: 0;
+          animation: slideFromLeft 2s ease-in-out 2s forwards;
+      }
+
+      .hobbies_h2 {
+          font-size: 2rem;
+          margin-top: 40px;
+          opacity: 0;
+          animation: fadeIn 1s ease-in-out 2s forwards;
+          margin-bottom: 20px;
+      }
+
+      .hobbies {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 20px;
+      }
+
+      .hobby {
+          background: #fff;
+          color: #00b3e6;
+          padding: 15px 20px;
+          border-radius: 20px;
+          font-weight: bold;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+          cursor: pointer;
+          transition: transform 0.5s, box-shadow 0.5s;
+          animation: slideFromBottom 2s ease-in-out 2s forwards;
+      }
+
+      .hobby:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      @keyframes slideFromTop {
+          from {
+              transform: translateY(-100%);
+              opacity: 0;
+          }
+          to {
+              transform: translateY(0);
+              opacity: 1;
+          }
+      }
+      @media(max-width:768px){
+        .about-content{
+          font-size: 1.0rem;
+        }
+        .about-content1{
+          font-size: 1.0rem;
+        }
+       .about-section{
+        margin-right: 0;
+       }
+       .about-title {
+        font-size: 2.5rem;
+       }
+       .hobbies_h2 {
+          font-size: 1.8rem;
+          margin-top: 25px;
+          margin-bottom: 25px;
+      }
+    }
+
+
+      @media(max-width:1250px){
+        .about-section{
+          margin-right: 0;
+        }
+      }
+  </style>
+      <div class="about-section">
+          <h1 class="about-title">About Me</h1>
+          <p class="about-content1">
+              Hi! I am a passionate Front-End Developer skilled in HTML, CSS, JavaScript, and React.
+              I am currently learning the MERN stack and striving to become a perfect Full-Stack Developer. 
+              I enjoy creating engaging, user-friendly websites and exploring new technologies to enhance my skills.
+          </p>
+          <p class="about-content">
+              Currently, I am studying Bachelor in Computer Science and Information Technology (BSc. CSIT) at Tribhuwan University. 
+              Over the course of my academic journey, I have developed strong problem-solving skills and gained solid understanding in various programming languages.
+          </p>
+          
+          <h2 class="hobbies_h2">Hobbies and Interests</h2>
+          
+          <div class="hobbies">
+              <div class="hobby">Gaming</div>
+              <div class="hobby">Coding</div>
+              <div class="hobby">Traveling</div>
+              <div class="hobby">Swimming</div>
+              <div class="hobby">Trading</div>
+              <div class="hobby">Cooking</div>
+          </div>
+      </div>
+      <script>
+          document.querySelectorAll('.hobby').forEach((hobby, index) => {
+              hobby.style.animationDelay = `${index * 0.2}s`;
+          });
+      </script>
+  </section>
+
+  <section id="skills">
+
+
+
+    <style>
+      /* Keyframes */
+      @keyframes slideFromTop {
+      from {
+          transform: translateY(-100px);
+          opacity: 0;
+      }
+      to {
+          transform: translateY(0);
+          opacity: 1;
+      }
+  }
+
+      @keyframes slideFromLeft {
+          from {
+              transform: translateX(-100px);
+              opacity: 0;
+          }
+          to {
+              transform: translateX(0);
+              opacity: 1;
+          }
+      }
+
+      @keyframes slideFromRight {
+          from {
+              transform: translateX(100px);
+              opacity: 0;
+          }
+          to {
+              transform: translateX(0);
+              opacity: 1;
+          }
+      }
+
+      @keyframes fadeIn {
+          from {
+              opacity: 0;
+          }
+          to {
+              opacity: 1;
+          }
+      }
+      
+      @keyframes slideFromBottom {
+        from {
+          transform: translateY(100px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      
+      body {
+          font-family: 'Poppins', sans-serif;
+          margin: 0;
+          padding: 0;
+          background: linear-gradient(135deg, #3a1c71, #271e3e) !important; 
+
+          color: #fff;
+          overflow-x: hidden;
+      }
+      .skills-title{
+        align-items: center;
+        margin-bottom: 70px;
+        padding-top: 5%;
+      }
+      .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+  }
+      .side-left-div {
+      display: flex;
+      flex-direction: row;
+      gap: 30px;
+      opacity: 0; /* Start hidden */
+      animation: none; /* Animation added dynamically */
+      animation-fill-mode: forwards; /* Ensure it stays at its final position */
+  }
+
+  .side-left-div.animated {
+      animation: slideFromLeft 1.5s ease-in-out forwards; /* Smooth animation */
+  }
+
+  .skill-cardjs{
+      width: 180px;
+      background:linear-gradient(135deg, #1ABC9C, #3498DB);
+      border-radius: 15px;
+      text-align: center;
+      padding: 20px;
+      box-shadow: 0 0px 15px rgba(241, 239, 239, 0.2);
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      opacity: 1; /* Start hidden */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .skill-card{
+      width: 180px;
+      background:linear-gradient(135deg, #1ABC9C, #3498DB);
+      border-radius: 15px;
+      text-align: center;
+      padding: 20px;
+      box-shadow: 0 0px 15px rgba(231, 225, 225, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      /* Start hidden */
+  }
+
+  .skill-card img {
+      width: 90px;
+      height: 90px;
+      margin-bottom: 15px;
+  }
+  .skill-cardjs img {
+      width: 90px;
+      height: 90px;
+      margin-bottom: 15px;
+  }
+
+
+  .skill-card:hover {
+      transform: scale(1.1);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+  }
+  .skill-cardjs:hover {
+      transform: scale(1.1);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+  }
+
+
+      .skill-name {
+          font-size: 1.3em;
+          font-weight: bold;
+          margin-top: 10px;
+          color: #fff;
+      }
+
+      @media (max-width: 768px) {
+          .skill-card {
+              width: 140px;
+          }
+          .skill-cardjs{
+              width: 140px;
+          }
+
+          .skill-card img {
+              width: 70px;
+              height: 70px;
+          }
+
+          .skill-name {
+              font-size: 1.1em;
+          }
+      }
+  </style>
+<div>
+      <h1 class="skills-title">My Skills</h1>
+      <h2></h2>
+      <div class="skills-container">
+        <!-- Side Left Div 1 -->
+        <div class="side-left-div" data-animation="slideFromLeft" data-delay="0.2s">
+            <div class="skill-card">
+                <img src="image/html.png" alt="HTML">
+                <div class="skill-name">HTML</div>
+            </div>
+            <div class="skill-card">
+                <img src="image/css.png" alt="CSS">
+                <div class="skill-name">CSS</div>
+            </div>
+        </div>
+
+        <!-- JavaScript Card -->
+        <div class="skill-cardjs">
+            <img src="image/javascript.png" alt="JavaScript">
+            <div class="skill-name">JavaScript</div>
+        </div>
+
+        <!-- Side Left Div 2 -->
+        <div class="side-left-div" data-animation="slideFromRight" data-delay="1.5s">
+            <div class="skill-card">
+                <img src="image/php.png" alt="PHP">
+                <div class="skill-name">PHP</div>
+            </div>
+            <div class="skill-card">
+                <img src="image/react.png" alt="React">
+                <div class="skill-name">React</div>
+            </div>
+        </div>
+
+        <!-- Side Left Div 3 -->
+        <div class="side-left-div" data-animation="slideFromBottom" data-delay="1.2s">
+            <div class="skill-card">
+                <img src="image/tailwind.png" alt="Tailwind CSS">
+                <div class="skill-name">Tailwind CSS</div>
+            </div>
+            <div class="skill-card">
+                <img src="image/bootstrap.png" alt="Bootstrap">
+                <div class="skill-name">Bootstrap</div>
+            </div>
+        </div>
+    </div>
+    <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              // Animate side-left-div elements
+              const sideLeftDivs = document.querySelectorAll('.side-left-div');
+              sideLeftDivs.forEach(div => {
+                  if (!div.classList.contains('animated')) {
+                      const animation = div.dataset.animation; // Get animation type
+                      const delay = div.dataset.delay || '0s'; // Get delay
+                      div.style.animation = `${animation} 1.5s ease-in-out forwards`;
+                      div.style.animationDelay = delay;
+                      div.classList.add('animated');
+                  }
+              });
+
+              // Animate JavaScript card fadeIn
+              const skillCards = document.querySelectorAll('.skill-card[data-animation="fadeIn"]');
+              skillCards.forEach(card => {
+                  const delay = card.dataset.delay || '0s';
+                  card.style.animation = `fadeIn 1.5s ease-in-out forwards`;
+                  card.style.animationDelay = delay;
+              });
+              // const skillCardsjs = document.querySelectorAll('.skill-cardjs[data-animation="fadeIn"]');
+              // skillCardsjs.forEach(card => {
+              //     const delay = card.dataset.delay || '0s';
+              //     card.style.animation = `fadeIn 1.5s ease-in-out forwards`;
+              //     card.style.animationDelay = delay;
+              // });
+
+              observer.unobserve(entry.target); // Stop observing after animation
+          }
+      });
+  });
+
+  observer.observe(document.getElementById('skills'));
+</script>
+    </section>
+  <section id="Projects">
+      <style>
+    
+        .project-container {
+          max-width: 1200px;
+          margin: 40px auto;
+          padding: 20px;
+          background-color: #fff;
+          border-radius: 10px;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+          animation: fadeIn 1.5s ease-in-out;
+          padding-bottom: 50px;
+        }
+    
+        .project-header {
+          text-align: center;
+          margin-bottom: 30px;
+        }
+    
+        .project-header h2 {
+          font-size: 36px;
+          color: #007bff;
+          margin-bottom: 10px;
+        }
+    
+        .project-header p {
+          font-size: 18px;
+          color: #666;
+          margin-bottom: 0;
+        }
+    
+        .project-content {
+          display: flex;
+          flex-direction: row;
+          /* flex-wrap: wrap; */
+          gap: 20px;
+          align-items: center;
+        }
+    
+        .project-image {
+          flex: 1 1 50%;
+          text-align: center;
+        }
+    
+        .project-image img {
+          width: 100%;
+          max-width: 500px;
+          border-radius: 10px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+          animation: slideIn 1.2s ease-in-out;
+        }
+    
+        .project-details {
+          flex: 1 1 50%;
+        }
+    
+        .project-details h3 {
+          font-size: 24px;
+          color: #333;
+          margin-bottom: 10px;
+        }
+    
+        .project-details ul {
+          list-style-type: none;
+          padding: 0;
+        }
+    
+        .project-details ul li {
+          font-size: 16px;
+          margin: 10px 0;
+          display: flex;
+          align-items: center;
+          color: black;
+        }
+    
+        .project-details ul li::before {
+          content: "✔";
+          color: #007bff;
+          margin-right: 10px;
+          font-weight: bold;
+        }
+    
+        .future-vision {
+          margin-top: 20px;
+          padding: 15px;
+          background-color: #eaf7ff;
+          border-left: 5px solid #007bff;
+          border-radius: 5px;
+          font-size: 16px;
+          color: #333;
+          transition: all 0.3s ease;
+        }
+    .future-vision:hover{
+      transform: scale(1.06);
+    }
+        .project-button {
+          display: inline-block;
+          margin-top: 20px;
+          padding: 12px 25px;
+          font-size: 16px;
+          font-weight: bold;
+          color: #fff;
+          background-color: #007bff;
+          border: none;
+          border-radius: 5px;
+          text-decoration: none;
+          transition: all 0.3s ease;
+          box-shadow: 0 4px 6px rgba(0, 123, 255, 0.3);
+        }
+    
+        .project-button:hover {
+          background-color: #0056b3;
+          transform: scale(1.05);
+        }
+    
+        @media (max-width: 768px) {
+          .project-content {
+            flex-direction: column;
+          }
+    
+          .project-image img {
+            max-width: 100%;
+          }
+    
+          .project-details ul li {
+            font-size: 14px;
+          }
+          .main-container{
+            padding-top: 0;
+          }
+        }
+    
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+    
+        @keyframes slideIn {
+          from {
+            opacity: 0;
+            transform: translateX(-50px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+        .main-container{
+            height: 100vh;
+            padding-top: 50px;
+        }
+      </style>
+      <div class="main-container">
+    <div class="project-container">
+      <div class="project-header">
+        <h2>Projects</h2>
+        <p>A modern tool designed for tracking and analyzing your stock investments.</p>
+      </div>
+      <div class="project-content">
+        <div class="project-image">
+          <img src="image/stock_portfolio.png" alt="Stock Portfolio Tracker Screenshot">
+        </div>
+        <div class="project-details">
+          <h3>Features:</h3>
+          <ul>
+            <li>Dynamic profit and loss calculation for stocks.</li>
+            <li>User-friendly interface for adding, editing, and managing stocks.</li>
+            <li>Detailed portfolio value breakdown with WACC insights.</li>
+            <li>Fully responsive design for mobile and desktop views.</li>
+          </ul>
+          <div class="future-vision">
+            <strong>Future Vision:</strong> This project is built with scalability in mind, enabling seamless
+             integration with APIs to fetch real-time stock prices. The updated model will provide users with accurate,
+              real-time insights into stock market trends.
+          </div>
+          <a href="#" class="project-button">Visit Website</a>
+        </div>
+      </div>
+    </div>
+    </div>
+    
+    
+  </section>
+  <section id="Education">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh;
+        }
+    main {
+      
+      flex: 1;
+      overflow-y: auto;
+      padding: 20px;
+  }
+
+  .timeline-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 50px;
+
+  }
+  .timeline-container1 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 50px;
+      margin-bottom: 10%;
+
+  }
+
+  .card-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width:fit-content ;
+
+  }
+
+  .education-card {
+      width: 280px;
+      height: 170px;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.8s;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .card-container:hover .education-card {
+      transform: rotateY(180deg);
+  }
+
+  .education-card-front, .education-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      border-radius: 15px;
+      padding: 20px;
+      box-sizing: border-box;
+  }
+
+  .education-card-front {
+      background: linear-gradient(135deg, #4e73df, #1f3b73);
+      color: white;
+  }
+
+  .education-card-back {
+      background-color: #e6e6fa;
+      transform: rotateY(180deg);
+      color: #333;
+  }
+
+  .education-card-front .details {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+  }
+
+  .education-card-front h3 {
+      margin: 10px 0;
+      font-size: 1.2em;
+      font-weight: bold;
+  }
+
+  .education-card-front p {
+      font-size: 1em;
+  }
+
+  .education-card-back p {
+      font-size: 0.9em;
+  }
+
+  .education-card-back strong {
+      color: #4e73df;
+  }
+
+  @media (max-width: 768px) {
+      main {
+          margin-left: 0;
+          padding: 10px;
+      }
+
+      .timeline-container {
+          flex-direction: column;
+          align-items: center;
+          gap: 30px;
+          /* margin-left: 0%; */
+      }
+
+      .education-card {
+          width: 220px;
+          height: 130px;
+          padding: 20px 10px;
+
+      }
+
+      .education-card-front h3, 
+      .education-card-front p, 
+      .education-card-back p {
+          font-size: 1em;
+      }
+      .education-title{
+        margin-top: 0;
+      }
+
+
+  }
+
+
+.education-title{
+text-align: center;
+margin-top: 150px;
+
+}
+.experience-title{
+margin-top: 25px;
+text-align: center;
+margin-bottom: 5px;
+
+}
+.education-card-front .details {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+  }
+
+  .education-card-front .details img {
+      width: 24px;
+      height: 24px;
+  }
+
+  .education-card-front .details span {
+      font-size: 0.9em;
+  }
+  .back-details{
+    color: #1a1a1a;
+  }
+</style>
+      <h1 class="education-title">Education</h1>
+      <div class="timeline-container">
+          <div class="card-container">
+              <div class="education-card">
+                  <div class="education-card-front">
+                      <div class="details">
+                      <img src="image/calander.png" alt="Calendar">
+                  <span>2007–2019</span>
+              </div>
+                      <h3>Secondary Education Examination</h3>
+                      <p>Joseph High School</p>
+                    
+                  </div>
+                  <div class="education-card-back">
+                      <p class="back-details">I completed school-level education from <strong>Joseph High School</strong> with a strong foundation in academics and extracurricular activities.</p>
+                  </div>
+              </div>
+          </div>
+
+          <div class="card-container">
+              <div class="education-card">
+                  <div class="education-card-front">
+                    <div class="details">
+                    <img src="image/calander.png" alt="Calendar">
+                    <span>2019–2022</span>
+                    </div>
+                      <h3>Higher Secondary Education</h3>
+                      <p>Trinity International College</p>
+                  </div>
+                  <div class="education-card-back">
+                      <p class="back-details">I completed my +2 education from <strong>Trinity International College</strong> with a focus on science subjects.</p>
+                  </div>
+              </div>
+          </div>
+
+          <div class="card-container">
+              <div class="education-card">
+                  <div class="education-card-front">
+                    <div class="details">
+                    <img src="image/calander.png" alt="Calendar">
+                    <span>2022–Present</span>
+                    </div>
+                      <h3>Bachelor's in CSIT</h3>
+                      <p>Orchid International College</p>
+                  </div>
+                  <div class="education-card-back">
+                      <p class="back-details">I am currently pursuing my Bachelor's in CSIT from <strong>Orchid International College</strong>.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <h1 class="experience-title">Experience</h1>
+      <div class="timeline-container1">
+                  <!-- Bachelor's in CSIT -->
+                  <div class="card-container">
+                      <div class="education-card">
+                          <div class="education-card-front">
+                              <div class="details">
+                                  <img src="image/calander.png" alt="Calendar">
+                                  <span>2022–Present</span>
+                              </div>
+                              <h3>Seeking Internship Oppurtunities</h3>
+                              <p>Kathmandu,Nepal</p>
+                          </div>
+                          <div class="education-card-back">
+                              <p class="back-details"> Motivated  <strong>CSIT student </strong> eager to learn, contribute, and grow through hands-on experience in the tech industry.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+  
+      </div>
+    
+
+  </section>
+  <section id="Contact">
+    <style>
+              
+             
+      .contact-container {
+width: 90%;
+max-width: 1000px;
+display: flex;
+justify-content: space-between;
+align-items: stretch;
+background: #c8d6f3;  /* Darker background color */
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+border-radius: 10px;
+padding: 20px;
+overflow: hidden;
+margin-left: 5%;
+}
+
+
+      .contact-details {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 20px;
+          opacity: 0;
+          transform: translateX(-100px);
+          animation: slideInLeft 1s ease-out forwards;
+          animation-delay: 0.5s;
+      }
+
+      .contact-heading {
+          font-size: 2rem;
+          font-weight: 700;
+          color: #00bcd4;
+          text-align: center;
+          margin-bottom: 20px;
+      }
+
+      .contact-card {
+          border: 2px solid #00bcd4;
+          border-radius: 10px;
+          margin: 10px 0;
+          padding: 20px;
+          text-align: center;
+          transition: all 0.3s ease;
+      }
+
+      .contact-card:hover {
+          transform:scale(1.04);
+          box-shadow: 0 0px 25px rgba(232, 48, 48, 0.2);
+      }
+
+      .contact-card img {
+          width: 50px;
+          margin-bottom: 15px;
+      }
+
+      .contact-card h3 {
+          font-size: 1.2rem;
+          color: #333;
+          margin-bottom: 10px;
+      }
+
+      .contact-card span {
+          font-size: 1rem;
+          color: #555;
+          font-weight: 600;
+      }
+
+      .contact-card.phone {
+          background: #00bcd4;
+          color: #fff;
+          border: none;
+      }
+
+      .contact-card.phone h3,
+      .contact-card.phone span {
+          color: #fff;
+      }
+
+      .contact-card.phone img {
+          filter: brightness(0) invert(1);
+      }
+
+      .contact-cards-container {
+          opacity: 0;
+          transform: translateX(-100px);
+          animation: slideIn 1s ease-out forwards;
+          animation-delay: 1s; /* Delay applied to the container */
+        
+      }
+
+      .slogan {
+margin-bottom: 20px;
+text-align: center;
+font-size: 1.5rem;
+font-weight: 600;
+color: #333;
+font-style: italic;
+display: inline-block;
+position: relative;
+opacity: 1;
+transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+height: 100px;
+}
+
+.slogan.fall {
+transform: rotateX(90deg);
+opacity: 0;
+}
+
+.slogan.rise {
+transform: rotateX(-90deg);
+opacity: 0;
+}
+
+.slogan.show {
+transform: rotateX(0deg);
+opacity: 1;
+}
+
+
+      form {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 20px;
+          opacity: 0;
+          transform: translateY(100px);
+          animation: slideIn 1s ease-out forwards;
+          animation-delay: 1s;
+      }
+
+      @keyframes slideIn {
+          to {
+              opacity: 1;
+              transform: translateY(0);
+          }
+      }
+
+      @keyframes slideInLeft {
+          to {
+              opacity: 1;
+              transform: translateX(0);
+          }
+      }
+
+      @keyframes fadeInUp {
+          to {
+              opacity: 1;
+              transform: translateY(0);
+          }
+      }
+
+      form input, form textarea, form button {
+          margin-bottom: 15px;
+          padding: 12px;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          font-size: 1rem;
+          width: 100%;
+          max-width: 600px;
+      }
+
+      form textarea {
+          resize: none;
+          height: 120px;
+      }
+
+      form button {
+          background: #00bcd4;
+          color: #fff;
+          border: none;
+          cursor: pointer;
+          font-weight: 600;
+          transition: background 0.3s ease;
+      }
+
+      form button:hover {
+          background: #0195a8;
+      }
+
+      @media (max-width: 768px) {
+          .contact-container {
+              flex-direction: column;
+              align-items: center;
+              margin: 0%;
+          }
+
+          .contact-details, form {
+              width: 100%;
+          }
+      }
+
+      .contact-card-socialmedia{
+          border: 2px solid ;
+          border-radius: 10px;
+          margin: 10px 0;
+          padding: 20px;
+          text-align: center;
+          transition: all 0.3s ease;
+          background-color: #2c2f5b;
+      }
+.follow-me{
+    color:#00d9a5;
+}
+      
+  </style>
+
+  <div class="contact-container">
+      <div class="contact-details">
+          <div class="contact-heading">Contact Me</div>
+          <div class="slogan show" id="slogan">"Feel free to reach!"</div>
+          
+          <!-- New container div for contact cards -->
+          <div class="contact-cards-container">
+            <a href="mailto:jeshanrai96@gmail.com" style="text-decoration: none;">  <div class="contact-card">
+                  <img src="image/gmail.png" alt="Email">
+                  <h3 >Email</h3>
+                  <span>jeshanrai96@gmail.com</span>
+              </div></a>
+            
+              <div class="contact-card phone">
+                  <img src="image/call.png" alt="Phone">
+                  <h3>Phone</h3>
+                  <span>977-9860149199</span>
+              </div>
+    
+          </div>
+      </div>
+
+      
+        <form method="POST" id="form">
+        <input type="hidden" name="access_key" value="272c7a10-6c30-4b2a-9296-ca84dcc3b190">
+
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+          <div id="result"></div>
+          <div class="contact-card-socialmedia">
+            <h3 class="follow-me">Follow Me</h3>
+            <div class="social-icons">
+            <a href="https://www.facebook.com/raichoro.ma" target="_blank" class="icon"><img src="image/facebook.png" alt="Facebook" class="social-image1"></a>
+            <a href="https://www.instagram.com/jeshan_rai/" target="_blank" class="icon"><img src="image/instagram.png" alt="Instagram" class="social-image1"></a>
+            <a href="https://www.linkedin.com/in/jeshan-rai-45092b340/" target="_blank" class="icon"><img src="image/linkden.png" alt="LinkedIn" class="social-image1"></a>
+            <a href="https://github.com/jeshanrai" target="_blank" class="icon"><img src="image/github.png" alt="GitHub" class="social-image1"></a>
+          
+
+
+              </div>
+      </form>
+
+   
+      
+  </div>
+
+  <script>
+      // document.getElementById('contact-form').addEventListener('submit', function(e) {
+      //     e.preventDefault();
+      //     const name = e.target.name.value;
+      //     alert(`Thank you, ${name}! Your message has been sent.`);
+      //     e.target.reset();
+      // });
+      const form = document.getElementById('form');
+const result = document.getElementById('result');
+
+form.addEventListener('submit', function(e) {
+const formData = new FormData(form);
+e.preventDefault();
+
+const object = Object.fromEntries(formData);
+const json = JSON.stringify(object);
+
+result.innerHTML = "Please wait..."
+
+fetch('https://api.web3forms.com/submit', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+    },
+    body: json
+})
+.then(async (response) => {
+    let json = await response.json();
+    if (response.status == 200) {
+        result.innerHTML = json.message;
+    } else {
+        console.log(response);
+        result.innerHTML = json.message;
+    }
+})
+.catch(error => {
+    console.log(error);
+    result.innerHTML = "Something went wrong!";
+})
+.then(function() {
+    form.reset();
+    setTimeout(() => {
+        result.style.display = "none";
+    }, 3000);
+});
+});
+
+      const slogans = [
+          "Every great connection starts with a message.",
+          "Feel free to reach!",
+      ];
+
+      let sloganIndex = 0;
+      const sloganElement = document.getElementById('slogan');
+
+      function updateSlogan() {
+          sloganElement.classList.remove('show');
+          sloganElement.classList.add('fall');
+
+          setTimeout(() => {
+              sloganElement.textContent = slogans[sloganIndex];
+              sloganElement.classList.remove('fall');
+              sloganElement.classList.add('rise');
+
+              setTimeout(() => {
+                  sloganElement.classList.remove('rise');
+                  sloganElement.classList.add('show');
+              }, 400); // Matches rise duration
+
+              sloganIndex = (sloganIndex + 1) % slogans.length;
+          }, 400); // Matches fall duration
+      }
+
+      setInterval(updateSlogan, 4000); // Change text every 5 seconds
+      updateSlogan(); // Initial call
+  </script>  
+
+
+  </section>
+  
+</main>
+
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const sidebar = document.getElementById('sidebar');
+    const closeBtn = document.getElementById('closeBtn');
+
+    hamburger.addEventListener('click', () => {
+        sidebar.classList.add('open');
+    });
+
+    closeBtn.addEventListener('click', () => {
+        sidebar.classList.remove('open');
+    });
+
+    // Close sidebar when clicking outside of it
+    document.addEventListener('click', (e) => {
+        if (!sidebar.contains(e.target) && !hamburger.contains(e.target)) {
+            sidebar.classList.remove('open');
+        }
+    });
+
+    const navItems = document.querySelectorAll('.nav-item');
+
+  navItems.forEach(item => {
+    const text = item.textContent.trim();
+    item.innerHTML = ''; // Clear original text content
+
+    // Wrap each letter in a <span>
+    [...text].forEach(letter => {
+      const span = document.createElement('span');
+      span.textContent = letter;
+      item.appendChild(span);
+    });
+  });
+  document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".nav-item").forEach(link => {
+    link.addEventListener("click", event => {
+      event.preventDefault();
+
+      const targetId = link.getAttribute("href").substring(1);
+      const targetSection = document.getElementById(targetId);
+
+      targetSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    });
+  });
+});
+</script>
+
+</body>
+</html>
