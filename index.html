@@ -514,7 +514,7 @@ box-shadow: 0 0px 35px rgba(250, 249, 249, 0.8);
 @media (max-width: 480px) {
 .avatar {
   width: 90%;
-  margin-right: 0;
+  /* margin-right: 0; */
   border: 5px solid #00d9a5;
   border-radius: 15px;
  
@@ -529,6 +529,19 @@ box-shadow: 0 0px 35px rgba(250, 249, 249, 0.8);
 .word{
     font-size: 20px;
 }
+}
+
+@media(max-width:563px){
+
+  body{
+    margin-left: 0px !important;
+    overflow: hidden !important;
+    padding-right: 0px !important;
+  }
+  main{
+    padding-right: 0px;
+    overflow: hidden;
+  }
 }
 
          /* Infinite Typing Effect for h2 */
@@ -1310,6 +1323,13 @@ box-shadow: 0 0px 35px rgba(250, 249, 249, 0.8);
           }
           .main-container{
             padding-top: 0;
+          }
+        }
+        @media (max-width:568px)
+        {
+          .main-container{
+            margin-right: 0px;
+            padding-right: 0px;
           }
         }
     
